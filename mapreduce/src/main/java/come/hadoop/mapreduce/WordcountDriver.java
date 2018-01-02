@@ -1,4 +1,4 @@
-package come.hadoop.mrtest;
+package come.hadoop.mapreduce;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
@@ -19,8 +19,9 @@ public class WordcountDriver {
 
     public static void main(String[] args) throws Exception {
         if(args == null || args.length==0){
-            args[0]="hdfs://node3:8020/tmp/stest/spc/wordcount/input/wordcount.txt";
-            args[1]="hdfs://node3:8020/tmp/stest/spc/wordcount/output";
+            args = new String[2];
+            args[0]="hdfs://node3:8020/tmp/stest/spc/wordcount/input";
+            args[1]="hdfs://node3:8020/tmp/stest/spc/wordcount/output/01";
         }
         Configuration conf= new Configuration();
         Job job = Job.getInstance(conf);

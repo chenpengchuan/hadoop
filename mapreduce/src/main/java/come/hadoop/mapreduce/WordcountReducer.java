@@ -1,4 +1,4 @@
-package come.hadoop.mrtest;
+package come.hadoop.mapreduce;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
