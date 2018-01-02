@@ -1,0 +1,3 @@
+come\hadoop\mrtest\WordcountDriver.class
+come\hadoop\mrtest\WordcountMapper.class
+come\hadoop\mrtest\WordcountReducer.class
