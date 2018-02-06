@@ -20,8 +20,8 @@ public class WordcountDriver {
     public static void main(String[] args) throws Exception {
         if(args == null || args.length==0){
             args = new String[2];
-            args[0]="hdfs://node3:8020/tmp/stest/spc/wordcount/input";
-            args[1]="hdfs://node3:8020/tmp/stest/spc/wordcount/output/01";
+            args[0]="hdfs://node1:8020/tmp/spc/input";
+            args[1]="hdfs://node1:8020/tmp/spc/wordcount/output";
         }
         Configuration conf= new Configuration();
         Job job = Job.getInstance(conf);
