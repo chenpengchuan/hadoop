@@ -8,9 +8,9 @@ import org.apache.spark.api.java.JavaPairRDD;
 import java.io.IOException;
 
 public class HdfsFile {
-    private static String fs_default_name = "hdfs://node3:8020";
-    public static String in_put_Path = fs_default_name + "/tmp/stest/spc/wordcount/input";
-    public static String out_put_Path = fs_default_name + "/tmp/stest/spc/wordcount/output";
+    private static String fs_default_name = "hdfs://node1:8020";
+    public static String in_put_Path = fs_default_name + "/tmp/spc/input/";
+    public static String out_put_Path = fs_default_name + "/tmp/spc/wordcount/output";
 
     // 文件系统连接到 hdfs的配置信息
     private static Configuration getConf() {
