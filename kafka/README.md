@@ -1,0 +1,5 @@
+在本机hosts文件中配置上kafka机器对应的ip和域名
+
+修改变量：TOPIC，BROKERLIST的值
+
+在idea中直接运行主类
