@@ -8,6 +8,7 @@ import java.util.Properties;
 public class KafkaProduce {
     private final String TOPIC = "logkeeper";
     private final String BROKERLIST = "192.168.2.204:9092";
+
     private void priduceMessage() {
         Properties props = new Properties();
         //此处配置的是kafka的brodelist的端口
@@ -23,7 +24,10 @@ public class KafkaProduce {
         KafkaProducer<String, String> producer = new KafkaProducer<>(props);
         String message = "hello";
         for (int i = 0; i < 10; i++) {
-            producer.send(new ProducerRecord<String, String>(TOPIC, Integer.toString(i), message + Integer.toString(i)));
+            //生成消息
+            ProducerRecord data = new ProducerRecord<String, String>(TOPIC, Integer.toString(i), message + Integer.toString(i));
+            //发送消息
+            producer.send(data);
         }
         producer.close();
         System.out.println("send finished");
