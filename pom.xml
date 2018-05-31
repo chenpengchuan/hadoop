@@ -10,6 +10,7 @@
     <modules>
         <module>mapreduce</module>
         <module>kafka</module>
+        <module>flink</module>
     </modules>
 
     <name>hadoop</name>

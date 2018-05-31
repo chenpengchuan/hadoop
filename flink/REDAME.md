@@ -1,0 +1,3 @@
+1.在socket机器上执行 nc -l 9000
+2.修改SocketWindowWordCount.java中的port为9000；host为socket机器的ip或hostname
+3.可以在idea中直接运行SocketWindowWordCount.jav主类，也可以打成可执行jar包，提交到flink中运行
