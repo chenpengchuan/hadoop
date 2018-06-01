@@ -17,8 +17,8 @@ public class SocketWindowWordCount {
             final ParameterTool params = ParameterTool.fromArgs(args);
 //            port = params.getInt("port");
 //            host = params.get("host");
-            host="node3";
-            port = 9000;
+            host=params.has("host") ? params.get("host") : "node3";
+            port = params.has("port") ? params.getInt("port") : 9000;
         } catch (Exception e) {
             System.err.println("No port specified. Please run 'SocketWindowWordCount --host <host> --port <port>'");
             return;
