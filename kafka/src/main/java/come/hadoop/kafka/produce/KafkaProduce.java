@@ -1,4 +1,4 @@
-package come.hadoop.kafka;
+package come.hadoop.kafka.produce;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -6,18 +6,18 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import java.util.Properties;
 
 public class KafkaProduce {
-    private final String TOPIC = "logkeeper";
-    private final String BROKERLIST = "192.168.2.204:9092";
+    private final String TOPIC = "csv1";
+    private final String BROKERLIST = "192.168.2.200:9092";
 
     private void priduceMessage() {
         Properties props = new Properties();
         //此处配置的是kafka的brodelist的端口
         props.put("bootstrap.servers", BROKERLIST);
-        props.put("acks", "all");
-        props.put("retries", 0);
-        props.put("batch.size", 16384);
-        props.put("linger.ms", 1);
-        props.put("buffer.memory", 33554432);
+//        props.put("acks", "all");
+//        props.put("retries", 0);
+//        props.put("batch.size", 16384);
+//        props.put("linger.ms", 1);
+//        props.put("buffer.memory", 33554432);
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         //创建生产这对象
@@ -25,7 +25,7 @@ public class KafkaProduce {
         String message = "hello";
         for (int i = 0; i < 10; i++) {
             //生成消息
-            ProducerRecord data = new ProducerRecord<String, String>(TOPIC, Integer.toString(i), message + Integer.toString(i));
+            ProducerRecord data = new ProducerRecord<String, String>(TOPIC, null, message + Integer.toString(i));
             //发送消息
             producer.send(data);
         }
