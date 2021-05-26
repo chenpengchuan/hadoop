@@ -13,6 +13,7 @@
         <module>flink</module>
         <module>spark</module>
         <module>rocketmq</module>
+        <module>geospark</module>
     </modules>
 
     <name>hadoop</name>
@@ -26,7 +27,7 @@
         <kafka.version>0.10.1.0</kafka.version>
         <kafka.client.version>0.10.1.0</kafka.client.version>
         <slf4j.version>1.7.5</slf4j.version>
-        <spark.version>2.2.0</spark.version>
+        <spark.version>2.4.5</spark.version>
 
     </properties>
 </project>
